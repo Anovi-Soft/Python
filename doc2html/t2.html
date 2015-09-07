@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Information about {{name}} module
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        background-color: #540132;
+      }
+      .opt {
+        opacity: 0.85;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-unit opt">
+        <h1 align="center">
+          Help: {{name}}
+        </h1>
+      </div>
+      
+      <div class="hero-unit opt">
+        <h1 align="center">
+          Description
+        </h1>
+      </br>
+      <p>
+        {{desc}}
+      </p>
+    </div>
+    
+    <div class="hero-unit opt">
+      <h1 align="center">
+        Classes
+      </h1>
+    </br>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="active">
+          <th>
+            Name
+          </th>
+          <th>
+            Description
+          </th>
+        </tr>
+      </thread>
+      
+      <tbody>
+        {% for x in classes %}
+        <tr>
+          
+          <td>
+            {{x[0]}}
+          </td>
+          <td>
+            {{x[1]}}
+          </td>
+          
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+  
+  
+  <div class="hero-unit opt">
+    <h1 align="center">
+      Functions
+    </h1>
+  </br>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="active">
+        <th>
+          Name
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+    </thread>
+    
+    <tbody>
+      {% for x in ff %}
+      <tr>
+        
+        <td>
+          {{x[0]}}
+        </td>
+        <td>
+          {{x[1]}}
+        </td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
+</html>

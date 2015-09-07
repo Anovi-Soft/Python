@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Information about {{name}} module
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <style type="text/css">
+    .container {
+      max-width: 800px;
+      padding-top: 50px;
+    }
+    body {
+      background-color: #2d5399;
+    }
+    div{
+      background-color: #99accd;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    table{
+      background-color: #ccd5e6;
+      border-radius: 5px;
+    }
+    .my_col{
+      background-color: #ccd5e6;
+      border-radius: 5px;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        <h1>
+          Help: {{name}}
+      </h1>
+    </p>
+    
+    <p>
+      <h2>
+        Description
+    </h2>
+  </p>
+  <table class="table table-hover">
+    <p class="my_col">
+      {{desc}}
+    </p>
+  </table>
+  <p>
+    <h3>
+      Classes
+  </h3>
+</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+  </thread>
+  
+  <tbody>
+    {% for x in classes %}
+    <tr>
+      
+      <td>
+        {{x[0]}}
+      </td>
+      <td>
+        {{x[1]}}
+      </td>
+      
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+<p>
+  <h3>
+    Functions
+</h3>
+</p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+  </thread>
+  
+  <tbody>
+    {% for x in ff %}
+    <tr>
+      
+      <td>
+        {{x[0]}}
+      </td>
+      <td>
+        {{x[1]}}
+      </td>
+      
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Information about {{name}} module
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+    .us_col {
+      background-color: #ffcb05;
+    }
+    
+    body {
+      padding-top: 20px;
+      padding-bottom: 90px;
+      background-color: #ffe582;
+      
+      
+    }
+    p {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      
+      font-size: 15pt;
+      
+    }
+    
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-unit us_col">
+        <h1 align="center">
+          Help: {{name}}
+      </h1>
+  </div>
+  
+  <div class="hero-unit us_col">
+    <h1 align="center">
+      Description
+    </h1>
+  </div>
+  </br>
+  <p align="center">
+    {{desc}}
+  </p>
+  </br>
+  
+  <div class="hero-unit us_col">
+    <h1 align="center">
+      Classes
+  </h1>
+  </div>
+</br>
+{% for x in classes %}
+<div class="row">
+  <div class="col-md-6">
+    
+    <p align="center">
+      {{x[0]}}
+    </p>
+    
+  </div>
+  <div class="col-md-6">
+    <p align="left">
+      {{x[1]}}
+    </p>
+    
+  </div>
+  
+</div>
+<hr color="#ffcb05" size="4">
+{% endfor %}
+</br>
+<div class="hero-unit us_col">
+  <h1 align="center">
+    Functions
+  </h1>
+</div>
+</br>
+{% for x in ff %}
+<div class="row">
+  <div class="col-md-6">
+    <p align="center">
+      {{x[0]}}
+    </p>
+    
+  </div>
+  <div class="col-md-6">
+    <p align="left">
+      {{x[1]}}
+    </p>
+    
+  </div>
+</div>
+<hr color="#ff0000" size="7">
+{% endfor %}
+</div>
+</body>
+</html>
